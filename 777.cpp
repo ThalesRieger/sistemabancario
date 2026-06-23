@@ -77,6 +77,15 @@ int main() {
                 }
                 }
                 break;
-            }
+                
+                case 6:
+                printf("\nValor pendente de emprestimo: R$ %.2d\n", emprestimo);
+                break;
+            	default:
+                printf("Opcao invalida, tente novamente.\n");
         }
     }
+
+    return 0;
+}
+
