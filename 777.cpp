@@ -58,6 +58,25 @@ int main() {
                     printf("Emprestimo de R$ %.2d aprovado. Novo saldo: R$ %.2d\n", valor, saldo);
                     }}
                     break;
+                    
+                case 5:
+                	
+                if (emprestimo == 0) {
+                printf("Nao ha emprestimo para pagar.\n");
+                } 
+				else {
+                printf("Emprestimo atual: R$ %.2d. Quanto deseja pagar? R$ ", emprestimo);
+                scanf("%d", &valor);
+                if (valor > 0 && valor <= saldo && valor <= emprestimo) {
+                    saldo -= valor;
+                    emprestimo -= valor;
+                    printf("Pagamento realizado. Restam R$ %.2d de emprestimo.\n", emprestimo);
+                }
+				else {
+                    printf("Saldo insuficiente ou valor excede o debito.\n");
+                }
+                }
+                break;
             }
         }
     }
